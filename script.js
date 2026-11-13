@@ -53,7 +53,7 @@ document.body.addEventListener('click', () => {
 // --- 4. Enviar datos a WhatsApp ---
 document.querySelector('.formulario-rsvp')?.addEventListener('submit', function(e) {
     e.preventDefault(); 
-    const numeroWhatsApp = "5636442379"; 
+    const numeroWhatsApp = "5631062961"; 
     const nombre = document.getElementById('nombreRsvp').value;
     const mensaje = document.getElementById('mensajeRsvp').value;
     const asiste = document.getElementById('asistenciaToggle').checked ? 'SÍ asistiré' : 'NO podré asistir';
