@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV Años - Blanca Ximena</title>
+    
+    <!-- Fuentes y Estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- === MARIPOSAS GRANDES === -->
+    <img src="https://i.postimg.cc/QtstKkSb/mariposa-derecha.png" alt="Mariposa" class="mariposa-fija m-1">
+    <img src="https://i.postimg.cc/QtstKkSb/mariposa-derecha.png" alt="Mariposa" class="mariposa-fija m-2">
+    <img src="https://i.postimg.cc/d1v1Zmn9/mariposa-izq.png" alt="Mariposa" class="mariposa-fija m-4">
+    <img src="https://i.postimg.cc/d1v1Zmn9/mariposa-izq.png" alt="Mariposa" class="mariposa-fija m-5">
+
+    <!-- === MARIPOSAS DE FONDO (Más pequeñas) === -->
+    <img src="https://i.postimg.cc/QtstKkSb/mariposa-derecha.png" alt="Mariposa" class="mariposa-fondo f-1">
+    <img src="https://i.postimg.cc/d1v1Zmn9/mariposa-izq.png" alt="Mariposa" class="mariposa-fondo f-2">
+    <img src="https://i.postimg.cc/QtstKkSb/mariposa-derecha.png" alt="Mariposa" class="mariposa-fondo f-3">
+    <img src="https://i.postimg.cc/d1v1Zmn9/mariposa-izq.png" alt="Mariposa" class="mariposa-fondo f-4">
+    <img src="https://i.postimg.cc/QtstKkSb/mariposa-derecha.png" alt="Mariposa" class="mariposa-fondo f-5">
+    <img src="https://i.postimg.cc/d1v1Zmn9/mariposa-izq.png" alt="Mariposa" class="mariposa-fondo f-6">
+
+    <!-- PORTADA -->
+    <section class="portada" style="background-image: url('https://i.postimg.cc/8CdZ1txW/file-000000006f2c822f9bf679a5ea1abe57.png');">
+        <div class="overlay">
+            
+            <!-- Contenedor de Textos -->
+            <div class="contenedor-textos-portada">
+                <p class="texto-portada-sup">Mis XV Años</p>
+                <h1 class="nombre-portada">Blanca Ximena</h1>
+                <p class="apellidos-portada">Martínez Vargas</p>
+            </div>
+
+            <!-- Temporizador 1 -->
+            <div class="temporizador" id="temporizador1">
+                <div><span class="dias">00</span><p>Días</p></div>
+                <div><span class="horas">00</span><p>Hrs</p></div>
+                <div><span class="minutos">00</span><p>Min</p></div>
+                <div><span class="segundos">00</span><p>Seg</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEPARADOR 1 -->
+    <div class="separador-imagen">
+        <img src="https://i.postimg.cc/nhnvZpYL/Picsart-26-11-10-23-01-44-380-jpg.jpg" alt="Separador elegante">
+    </div>
+
+    <!-- SECCIÓN DE MÚSICA -->
+    <section class="seccion-musica">
+        <h1 class="titulo-musica">Dale play a mi canción favorita</h1>
+        
+        <img src="portada1.jpg" alt="Portada de la canción" class="portada-cancion">
+        
+        <p class="subtitulo-musica">Can't Take My Eyes Off You - Frankie Valli</p>
+
+        <!-- Reproductor Nativo -->
+        <audio id="musicaFondo" controls loop class="reproductor-elegante">
+            <source src="cancion.mp3" type="audio/mpeg">
+        </audio>
+        
+        <div id="indicadorMusica">
+            <i class="fas fa-music"></i> <span id="nombreCancion">Can't Take My Eyes Off You</span>
+        </div>
+
+        <!-- Botones Plataformas -->
+        <div class="contenedor-botones-musica">
+            <a href="https://open.spotify.com/track/0bfvHnWWOeU1U5XeKyVLbW?si=219a61c49faa45c3" target="_blank" class="btn-musica btn-spotify">
+                <img src="spotify.png" alt="Spotify">
+            </a>
+            <a href="https://music.youtube.com/watch?v=DYwQy_9JPtQ&si=3GCncSNKstkaPxhT" target="_blank" class="btn-musica btn-ytmusic">
+                <img src="YTM.png" alt="YouTube Music">
+            </a>
+            <a href="https://music.apple.com/mx/song/cant-take-my-eyes-off-you/40454283" target="_blank" class="btn-musica btn-applemusic">
+                <img src="Apple_Music_Logo.png" alt="Apple Music">
+            </a>
+        </div>
+    </section>
+
+    <!-- CUERPO DE LA INVITACIÓN -->
+    <section class="cuerpo" style="background-image: url('URL_IMAGEN_FONDO_CUERPO.jpg');">
+        <div class="overlay-cuerpo">
+            
+            <!-- Padres y Padrinos -->
+            <div class="seccion-familia animar">
+                <p class="texto-claro">EN COMPAÑÍA DE MIS PADRES</p>
+                <p class="nombres-familia">Gabriela Vargas Rodríguez y Sergio Martínez Hernández</p>
+                <br>
+                <p class="texto-claro">Y MIS PADRINOS DE XV</p>
+                <p class="nombres-familia">Mireya Hernández León y Juan A. Vargas Rodríguez</p>
+            </div>
+
+            <!-- Carta Abierta / Oración -->
+            <div class="seccion-carta animar">
+                <h1 class="titulo-oracion">Oración</h1>
+                <img src="https://i.postimg.cc/FF3dRzZT/Picsart-26-11-10-23-51-30-153.png" alt="Mariposa decorativa" class="mariposa-carta">
+                
+                <div class="oracion-texto">
+                    <p>Señor amado, hoy te doy gracias por el don de vida,</p>
+                    <p>por los quince años que me has permitido vivir,</p>
+                    <p>por mi familia, mis amigos y por cada momento</p>
+                    <p class="espacio">que me ha hecho crecer en amor y en fe.</p>
+
+                    <p>Te pido que me guíes en este nuevo caminar,</p>
+                    <p>que tu luz ilumine mis pasos,</p>
+                    <p class="espacio">y que tu gracia me acompañe en cada decisión.</p>
+
+                    <p>Que nunca me aparte de Ti,</p>
+                    <p>que conserve la pureza de mi corazón</p>
+                    <p class="espacio">y que siempre viva con alegría, humildad y esperanza.</p>
+
+                    <p>Hoy me entrego a tus manos,</p>
+                    <p>con la ilusión de seguir cumpliendo sueños</p>
+                    <p>y con la certeza de que contigo, señor,</p>
+                    <p class="espacio">mi vida siempre tendrá propósito y bendición.</p>
+
+                    <p>Amén.</p>
+                </div>
+            </div>
+
+            <!-- Calendario -->
+            <div class="seccion-calendario animar">
+                <h3>FALTAN</h3>
+                <div class="temporizador" id="temporizador2">
+                    <div><span class="dias">00</span><p>Días</p></div>
+                    <div><span class="horas">00</span><p>Hrs</p></div>
+                    <div><span class="minutos">00</span><p>Min</p></div>
+                    <div><span class="segundos">00</span><p>Seg</p></div>
+                </div>
+                
+                <div class="calendario">
+                    <h4>ENERO 2027</h4>
+                    <div class="dias-semana">
+                        <span>D</span><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span>
+                    </div>
+                    <div class="dias-mes">
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                        <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+                        <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
+                        <span class="dia-evento destello">23</span>
+                        <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+                    </div>
+                </div>
+                
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XV+Años+de+Blanca+Ximena&dates=20270123T180000/20270124T020000&details=¡Acompáñame+a+celebrar+este+gran+día!&location=Lugar+del+evento" target="_blank" class="btn-calendario">
+                    <i class="far fa-calendar-plus"></i> Agendar Evento
+                </a>
+            </div>
+
+            <!-- Collage Polaroid -->
+            <div class="seccion-collage animar">
+                <div class="polaroid foto1">
+                    <img src="https://i.postimg.cc/50xnj8MK/file-000000007f64822fb341dce774c22121.png" alt="Foto 1">
+                </div>
+                <div class="polaroid foto2">
+                    <img src="https://i.postimg.cc/B6MNFtS1/Picsart-26-11-10-21-57-00-650-jpg.jpg" alt="Foto 2">
+                </div>
+                <div class="polaroid foto3">
+                    <img src="https://i.postimg.cc/gjjsHdjB/Picsart-26-11-10-21-56-32-843-jpg.jpg" alt="Foto 3">
+                </div>
+            </div>
+
+            <!-- Ubicaciones -->
+            <div class="seccion-ubicaciones animar">
+                <div class="tarjeta-ubicacion">
+                    <i class="fa-solid fa-church icono-ubicacion"></i>
+                    <h3>Iglesia</h3>
+                    <p>Parroquia San Miguel Arcángel<br><br>
+                    <p>Laurel Manzana 58, Lomas de San Miguel, 52928 Cdad. López Mateos, Méx.</br><br>
+                    <p>Hora: 4.45 PM</br><br>    
+                    <a href="https://maps.app.goo.gl/nTiX7mRkjyt8EUBs7" class="btn-mapa" target="_blank">Ver Ubicación</a>
+                </div>
+                <div class="tarjeta-ubicacion">
+                    <i class="fa-solid fa-champagne-glasses icono-ubicacion"></i>
+                    <h3>Recepción</h3>
+                    <p>Jardín Garella<br><br>
+                    <p>Río Grijalva Río Hondo esquina-I, Prados de Ixtacala, 52928 México, Méx.</br><br>
+                    <p>Hora: 6 PM</p>       
+                    <a href="https://maps.app.goo.gl/GuFt6ZSGmNvRqfLm7" class="btn-mapa" target="_blank">Ver Ubicación</a>
+                </div>
+            </div>
+
+            <!-- Código de Vestimenta -->
+            <div class="seccion-vestimenta animar">
+                <i class="fa-solid fa-user-tie icono-vestimenta"></i>
+                <h3>Código de Vestimenta</h3>
+                <p>Formal / Elegante</p>
+            </div>
+            
+            <!-- Sección de Regalos -->
+            <div class="seccion-regalos animar">
+                <div class="contenedor-iconos-regalo">
+                    <!-- Ícono de Sobre -->
+                    <svg width="70" height="70" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="15" width="90" height="55" rx="4" fill="#f9f5ff" stroke="#a983d3" stroke-width="3" stroke-linejoin="round"/>
+                        <rect x="12" y="22" width="76" height="41" rx="2" fill="none" stroke="#a983d3" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round"/>
+                        <polyline points="5,15 50,45 95,15" fill="none" stroke="#a983d3" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+                        <polyline points="14,19 50,40 86,19" fill="none" stroke="#a983d3" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round"/>
+                        <path d="M50,56 C50,56 36,44 36,34 C36,28 41,24 47,24 C49,24 50,26 50,26 C50,26 51,24 53,24 C59,24 64,28 64,34 C64,44 50,56 50,56 Z" fill="#a983d3" stroke="#6b4c9a" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M 42,32 Q 44,28 46,32" fill="none" stroke="#f9f5ff" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+
+                    <!-- Letra O -->
+                    <span class="letra-o-regalo">O</span>
+
+                    <!-- Ícono de Regalo (Mismo estilo) -->
+                    <svg width="70" height="70" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="15" y="35" width="70" height="40" rx="3" fill="#f9f5ff" stroke="#a983d3" stroke-width="3" stroke-linejoin="round"/>
+                        <rect x="10" y="20" width="80" height="15" rx="3" fill="#f9f5ff" stroke="#a983d3" stroke-width="3" stroke-linejoin="round"/>
+                        <rect x="42" y="35" width="16" height="40" fill="#a983d3" stroke="#6b4c9a" stroke-width="2" stroke-linejoin="round"/>
+                        <rect x="42" y="20" width="16" height="15" fill="#a983d3" stroke="#6b4c9a" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M 50,20 C 35,5 20,15 45,20 Z" fill="#a983d3" stroke="#6b4c9a" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M 50,20 C 65,5 80,15 55,20 Z" fill="#a983d3" stroke="#6b4c9a" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+                <h3>Regalos</h3>
+                <p>El mejor regalo que puedo recibir es tu presencia en este día tan especial. <br>
+                Sin embargo, si deseas tener un detalle adicional, un sobre o un regalo será muy bien recibido. <br><br>
+                ¡Gracias por acompañarme!</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- SEPARADOR 2 -->
+    <div class="separador-imagen">
+        <img src="https://i.postimg.cc/nhnvZpYL/Picsart-26-11-10-23-01-44-380-jpg.jpg" alt="Separador elegante">
+    </div>
+
+    <!-- PIE DE PÁGINA: RSVP -->
+    <footer class="pie-pagina" style="background-image: url('URL_IMAGEN_FONDO_PIE.jpg');">
+        <div class="overlay-pie">
+            <div class="seccion-rsvp animar">
+                <h1 class="titulo-footer">Confirmación de asistencia</h1>
+                <form class="formulario-rsvp">
+                    <input type="text" id="nombreRsvp" placeholder="Nombre completo" required>
+                    <textarea id="mensajeRsvp" placeholder="Buenos deseos (Opcional)" rows="3"></textarea>
+                    
+                    <div class="interruptor-container">
+                        <p>¿Asistirás?</p>
+                        <div class="toggle-switch">
+                            <span class="toggle-label no">NO</span>
+                            <label class="switch">
+                                <input type="checkbox" id="asistenciaToggle" checked>
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="toggle-label si">SÍ</span>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-confirmar"><i class="fab fa-whatsapp"></i> Confirmar por WhatsApp</button>
+                </form>
+            </div>
+            
+            <div class="mariposa-final-contenedor">
+                <img src="https://i.postimg.cc/mDRD1NV8/mariposa-central.png" alt="Mariposa" class="mariposa-final">
+            </div>
+            <h1 class="mensaje-final">Te espero para celebrar juntos ese grandioso día</h1>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

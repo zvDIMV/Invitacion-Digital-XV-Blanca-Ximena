@@ -1,0 +1,230 @@
+:root {
+    --color-lila-claro: #E6D0F5;
+    --color-lila-principal: #a983d3;
+    --color-lila-oscuro: #6B3FA0;
+    --color-texto: #333;
+    --color-blanco: #ffffff;
+    --fuente-cursiva: 'Tangerine', cursive;
+    --fuente-texto: 'Montserrat', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--fuente-texto); color: var(--color-texto); overflow-x: hidden; background-color: var(--color-blanco); }
+
+#indicadorMusica {
+    position: fixed; bottom: 15px; right: 15px; background: rgba(255, 255, 255, 0.9);
+    color: var(--color-lila-oscuro); padding: 5px 10px; border-radius: 20px; font-size: 10px; z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 5px;
+}
+
+/* --- ANIMACIONES --- */
+@keyframes latidoBrillo {
+    0% { filter: drop-shadow(0 0 2px var(--color-lila-principal)); transform: scale(1); }
+    50% { filter: drop-shadow(0 0 15px var(--color-lila-oscuro)) drop-shadow(0 0 8px var(--color-lila-claro)); transform: scale(1.05); }
+    100% { filter: drop-shadow(0 0 2px var(--color-lila-principal)); transform: scale(1); }
+}
+
+@keyframes palpitar { 
+    0% { transform: scale(1); box-shadow: 0 0 5px var(--color-lila-principal); } 
+    50% { transform: scale(1.1); box-shadow: 0 0 15px var(--color-lila-principal); } 
+    100% { transform: scale(1); box-shadow: 0 0 5px var(--color-lila-principal); } 
+}
+
+/* --- MARIPOSAS --- */
+/* --- ANIMACIONES DE VUELO --- */
+@keyframes vuelo1 {
+    0%, 100% { transform: translate(0, 0) rotate(15deg); filter: drop-shadow(0 0 2px var(--color-lila-principal)); }
+    33% { transform: translate(80px, -100px) rotate(35deg) scale(1.1); filter: drop-shadow(0 0 10px var(--color-lila-oscuro)); }
+    66% { transform: translate(-30px, -50px) rotate(5deg) scale(0.9); filter: drop-shadow(0 0 5px var(--color-lila-claro)); }
+}
+
+@keyframes vuelo2 {
+    0%, 100% { transform: translate(0, 0) rotate(-25deg); filter: drop-shadow(0 0 2px var(--color-lila-principal)); }
+    33% { transform: translate(-90px, -80px) rotate(-5deg) scale(1.1); filter: drop-shadow(0 0 10px var(--color-lila-oscuro)); }
+    66% { transform: translate(40px, -40px) rotate(-45deg) scale(0.9); filter: drop-shadow(0 0 5px var(--color-lila-claro)); }
+}
+
+@keyframes vuelo3 {
+    0%, 100% { transform: translate(0, 0) rotate(45deg); }
+    50% { transform: translate(-120px, 90px) rotate(15deg) scale(1.2); }
+}
+
+@keyframes vuelo4 {
+    0%, 100% { transform: translate(0, 0) rotate(-45deg); }
+    50% { transform: translate(100px, 120px) rotate(-15deg) scale(1.2); }
+}
+
+/* --- MARIPOSAS --- */
+.mariposa-fija {
+    position: fixed; width: 150px; height: auto; opacity: 0.95; pointer-events: none; z-index: 0; 
+}
+/* Mariposas Grandes */
+.m-1 { top: 5%; left: -30px; animation: vuelo1 18s infinite ease-in-out; }
+.m-2 { top: 25%; right: -20px; animation: vuelo2 20s infinite ease-in-out; }
+.m-4 { top: 68%; right: -40px; animation: vuelo2 22s infinite ease-in-out reverse; }
+.m-5 { top: 85%; left: -10px; animation: vuelo1 19s infinite ease-in-out reverse; }
+
+.mariposa-fondo {
+    position: fixed; width: 70px; height: auto; opacity: 0.6; pointer-events: none; z-index: 0;
+}
+/* Mariposas Pequeñas */
+.f-1 { top: 12%; left: 20%; animation: vuelo3 15s infinite ease-in-out; }
+.f-2 { top: 32%; right: 15%; animation: vuelo4 17s infinite ease-in-out; }
+.f-3 { top: 52%; left: 15%; animation: vuelo3 20s infinite ease-in-out reverse; }
+.f-4 { top: 72%; right: 25%; animation: vuelo4 18s infinite ease-in-out reverse; }
+.f-5 { top: 88%; left: 35%; animation: vuelo3 22s infinite ease-in-out; }
+.f-6 { top: 18%; right: 35%; animation: vuelo4 16s infinite ease-in-out reverse; }
+
+/* Mariposa final del footer */
+.mariposa-final { 
+    display: block; width: 120px; height: auto; margin: 30px auto 0 auto; 
+    animation: latidoBrillo 4s infinite ease-in-out; /* Esta se queda latiendo en su lugar */
+}
+
+/* --- PORTADA Y FONDOS --- */
+.portada, .cuerpo, .pie-pagina { background-size: cover; background-position: center; position: relative; }
+.portada, .cuerpo { background-attachment: fixed; }
+.portada { min-height: 100vh; }
+.cuerpo { background-image: url('tu-fondo-marmol.jpg'); }
+
+.overlay, .overlay-cuerpo, .overlay-pie { 
+    width: 100%; height: 100%; min-height: 100vh; display: flex; flex-direction: column; 
+    justify-content: center; align-items: center; padding: 20px; 
+}
+.overlay-cuerpo, .overlay-pie { background: rgba(255, 255, 255, 0.65); }
+.overlay { background: transparent; }
+
+/* Textos Extraídos (Portada y Títulos) */
+.contenedor-textos-portada { text-align: center; text-shadow: 2px 2px 6px rgba(0,0,0,0.8); margin-bottom: 20px; width: 100%; z-index: 2; position: relative; }
+.texto-portada-sup { font-family: var(--fuente-texto); font-size: 1.5rem; color: white; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 5px; font-weight: bold; }
+.nombre-portada { font-family: var(--fuente-cursiva); font-size: 7rem; color: var(--color-lila-principal); margin: 0; font-weight: normal; line-height: 1; }
+.apellidos-portada { font-family: var(--fuente-texto); font-size: 1.5rem; color: white; letter-spacing: 4px; margin-top: 5px; font-weight: 500; }
+.texto-claro { color: var(--color-texto); letter-spacing: 2px; }
+
+/* --- MÚSICA Y REPRODUCTOR --- */
+.seccion-musica { text-align: center; margin: 30px 0; z-index: 10; position: relative; }
+.titulo-musica { font-family: var(--fuente-cursiva); font-size: 4rem; color: var(--color-lila-principal); margin: 0 0 20px 0; font-weight: normal; line-height: 1; }
+.portada-cancion { display: block; margin: 0 auto 20px auto; width: 180px; height: 180px; object-fit: cover; border-radius: 15px; box-shadow: 0 5px 15px rgba(107, 76, 154, 0.3); }
+.subtitulo-musica { font-family: var(--fuente-texto); font-size: 1rem; color: var(--color-lila-oscuro); letter-spacing: 2px; margin-bottom: 15px; text-transform: uppercase; }
+
+.reproductor-elegante { width: 280px; height: 45px; outline: none; border-radius: 30px; box-shadow: 0 5px 15px rgba(107, 76, 154, 0.2); }
+.reproductor-elegante::-webkit-media-controls-panel { background-color: #f5f0fa; }
+
+/* Botones de Música */
+.contenedor-botones-musica { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+.btn-musica { display: flex; justify-content: center; align-items: center; width: 45px; height: 45px; border-radius: 50%; transition: transform 0.2s ease; }
+.btn-musica:hover { transform: scale(1.1); }
+.btn-musica img { width: 24px; height: 24px; object-fit: contain; }
+.btn-spotify { background-color: #fdfffe; box-shadow: 0 4px 10px rgba(29, 185, 84, 0.3); }
+.btn-ytmusic { background-color: #f5f5f5; box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3); }
+.btn-applemusic { background-color: #fbf8f8; box-shadow: 0 4px 10px rgba(250, 36, 60, 0.3); }
+
+/* --- SEPARADORES --- */
+.separador-imagen { width: 100%; text-align: center; background-color: var(--color-blanco); padding: 30px 20px; position: relative; z-index: 5; }
+.separador-imagen img { width: 100%; max-width: 400px; height: auto; max-height: 120px; object-fit: contain; opacity: 0.9; }
+
+/* --- TEMPORIZADOR --- */
+.temporizador { display: flex; gap: 15px; margin-top: 20px; margin-bottom: 20px;}
+.temporizador div { background: rgba(255, 255, 255, 0.9); border: 2px solid var(--color-lila-principal); border-radius: 10px; padding: 10px; width: 70px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center;}
+.temporizador span { font-size: 1.8rem; font-weight: 600; color: var(--color-lila-oscuro); }
+.temporizador p { font-size: 0.8rem; text-transform: uppercase; color: var(--color-texto); }
+
+/* --- CUERPO Y SECCIONES --- */
+.overlay-cuerpo { padding: 50px 20px; gap: 60px; z-index: 2; min-height: auto; }
+.animar { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
+.animar.visible { opacity: 1; transform: translateY(0); }
+
+.seccion-familia { text-align: center; }
+.nombres-familia { font-family: var(--fuente-cursiva); font-size: 4rem; color: var(--color-lila-principal); margin: 0; font-weight: normal; line-height: 1; }
+
+/* Oración */
+.seccion-carta { width: 100%; max-width: 600px; text-align: center; position: relative; }
+.titulo-oracion { font-family: var(--fuente-cursiva); font-size: 6rem; color: var(--color-lila-principal); margin: 0 0 20px 0; font-weight: normal; line-height: 1; }
+.oracion-texto p { text-align: center; margin-bottom: 5px; font-size: 1.1rem; color: #444; }
+.oracion-texto .espacio { margin-bottom: 25px; }
+.mariposa-carta { position: absolute; top: -20px; left: -35px; width: 70px; height: auto; transform: rotate(-15deg); z-index: 5; filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.15)); animation: latidoBrillo 4s infinite ease-in-out; }
+
+/* Calendario */
+.seccion-calendario { text-align: center; background: rgba(255,255,255,0.95); padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); display: flex; flex-direction: column; align-items: center;}
+.seccion-calendario h3 { color: var(--color-lila-oscuro); letter-spacing: 3px; margin-bottom: 10px; }
+.calendario { margin-top: 20px; max-width: 300px; }
+.dias-semana, .dias-mes { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; margin-top: 10px; }
+.dias-semana span { font-weight: bold; color: var(--color-lila-oscuro); }
+.dias-mes span { padding: 5px; border-radius: 50%; color: #333;}
+.dia-evento { background-color: var(--color-lila-principal); color: white !important; font-weight: bold; }
+.destello { animation: palpitar 1.5s infinite; box-shadow: 0 0 10px var(--color-lila-principal); }
+.btn-calendario { display: inline-block; margin-top: 25px; padding: 12px 25px; background: var(--color-blanco); color: var(--color-lila-oscuro); border: 2px solid var(--color-lila-oscuro); text-decoration: none; border-radius: 25px; font-weight: 600; transition: 0.3s; }
+.btn-calendario:hover { background: var(--color-lila-oscuro); color: white; }
+
+/* Collage */
+.seccion-collage { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.polaroid { background: white; padding: 10px 10px 40px 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); width: 250px; transition: transform 0.3s; }
+.polaroid img { width: 100%; height: 250px; object-fit: cover; }
+.foto1 { transform: rotate(-5deg); } .foto2 { transform: rotate(2deg); margin-top: 20px; } .foto3 { transform: rotate(-3deg); }
+.polaroid:hover { transform: scale(1.05) rotate(0deg); z-index: 10; }
+
+/* Ubicaciones y Vestimenta */
+.seccion-ubicaciones { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; text-align: center; }
+.tarjeta-ubicacion { background: rgba(255,255,255,0.95); padding: 30px; border-radius: 15px; width: 280px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 2px solid transparent; transition: all 0.4s ease; }
+.tarjeta-ubicacion:hover { transform: translateY(-8px); border-color: var(--color-lila-claro); box-shadow: 0 0 25px var(--color-lila-principal), 0 10px 20px rgba(0,0,0,0.1); z-index: 10; }
+.icono-ubicacion, .icono-vestimenta { font-size: 3rem; color: var(--color-lila-principal); margin-bottom: 15px; }
+.btn-mapa { display: inline-block; margin-top: 15px; padding: 10px 20px; background: var(--color-lila-oscuro); color: white; text-decoration: none; border-radius: 25px; transition: background 0.3s; }
+.btn-mapa:hover { background: var(--color-lila-principal); }
+.seccion-vestimenta { text-align: center; background: rgba(255,255,255,0.95); padding: 30px 60px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+/* Regalos */
+.seccion-regalos { background-color: white; border-radius: 15px; box-shadow: 0 8px 20px rgba(107, 76, 154, 0.15); padding: 35px 25px; margin: 40px auto; max-width: 85%; text-align: center; border: 1px solid #f2eaff; }
+.seccion-regalos h3 { font-family: var(--fuente-texto); font-size: 1.2rem; color: var(--color-lila-oscuro); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; }
+.seccion-regalos p { font-family: var(--fuente-texto); font-size: 0.95rem; color: #555; line-height: 1.6; }
+
+/* --- PIE DE PÁGINA (Footer RSVP) --- */
+.overlay-pie { padding: 60px 20px 30px 20px; text-align: center; min-height: auto;}
+.seccion-rsvp { background: rgba(255,255,255,0.95); padding: 40px; border-radius: 15px; width: 100%; max-width: 500px; margin: 0 auto; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+.titulo-footer { font-family: var(--fuente-cursiva); font-size: 3.5rem; color: var(--color-lila-principal); margin-bottom: 20px; font-weight: normal; line-height: 1; }
+.formulario-rsvp input, .formulario-rsvp textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; font-family: var(--fuente-texto); }
+
+.interruptor-container { margin: 20px 0; }
+.toggle-switch { display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 10px; }
+.toggle-label { font-weight: bold; color: #666; }
+.toggle-label.si { color: var(--color-lila-oscuro); }
+.switch { position: relative; display: inline-block; width: 60px; height: 34px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; }
+.slider:before { position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%;}
+input:checked + .slider { background-color: var(--color-lila-principal); }
+input:checked + .slider:before { transform: translateX(26px); }
+.slider.round { border-radius: 34px; }
+
+.btn-confirmar { background: #25D366; color: white; border: none; padding: 15px 30px; border-radius: 25px; font-size: 1.1rem; cursor: pointer; width: 100%; margin-top: 15px; font-weight: bold; transition: 0.3s; }
+.btn-confirmar:hover { background: #128C7E; }
+.mensaje-final { font-family: var(--fuente-cursiva); font-size: 4rem; color: var(--color-lila-principal); margin: 10px 0 0 0; font-weight: normal; line-height: 1; }
+
+/* --- RESPONSIVE (Móviles) --- */
+@media (max-width: 600px) {
+    .nombre-portada { font-size: 4.5rem; }
+    .nombres-familia, .titulo-oracion { font-size: 3.5rem; }
+    .temporizador div { width: 60px; padding: 8px; }
+    .polaroid { width: 100%; max-width: 300px; }
+    .mariposa-fija { width: 100px; }
+    .mariposa-fondo { width: 45px; } 
+    .separador-imagen { padding: 20px 10px; }
+    .separador-imagen img { max-width: 80%; }
+    .m-1 { left: -10px; } .m-2 { right: -10px; } 
+    .m-4 { right: -15px; } .m-5 { left: -5px; }
+}
+/* Contenedor para alinear los íconos de regalo horizontalmente */
+.contenedor-iconos-regalo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+    margin-bottom: 20px;
+}
+
+/* Estilo para la letra "O" */
+.letra-o-regalo {
+    font-family: var(--fuente-texto);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-lila-oscuro);
+}
